@@ -15,7 +15,7 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   header: {
-    height: 200,
+    height: 150,
     backgroundColor: '#327fe3',
     flexDirection: 'row',
     alignItems: 'center',
@@ -29,12 +29,12 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
     marginLeft: 18,
-    fontWeight: 'bold',
+    fontFamily: 'MontserratSemiBold',
   },
   kelas: {
     color: 'white',
     fontSize: 12,
     marginLeft: 18,
-    flexWrap: 'nowrap',
+    fontFamily: 'MontserratLight',
   },
 });
