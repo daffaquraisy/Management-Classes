@@ -108,5 +108,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderBottomColor: '#acacac',
     borderBottomWidth: 1,
+    backgroundColor: '#888787',
+    width: 230,
   },
 });

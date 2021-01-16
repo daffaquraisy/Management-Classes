@@ -7,8 +7,8 @@ export default function Body() {
     <View>
       <View style={styles.body}>
         <Text style={styles.text}>My Course</Text>
-        <SubBody />
       </View>
+      <SubBody />
     </View>
   );
 }

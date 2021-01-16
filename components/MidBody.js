@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
     marginTop: 130,
+    height: '100%',
   },
   text: {
     padding: 20,
@@ -45,7 +46,6 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   boxWhite: {
-    height: '100%',
     width: 300,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   boxBlue: {
-    height: '100%',
     width: 300,
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
     backgroundColor: '#327fe3',
+    height: '100%',
   },
   labelWrap: {
     position: 'absolute',

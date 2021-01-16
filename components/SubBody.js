@@ -5,7 +5,7 @@ export default function Body() {
   return (
     <View>
       <View style={styles.jadwal}>
-        <ScrollView horizontal={true} style={styles.scrollView}>
+        <ScrollView horizontal={true}>
           <View style={styles.box}>
             <Text style={styles.title}>Math</Text>
             <View style={styles.wrap}>
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: '#327fe3',
     marginLeft: 10,
+    marginRight: 5,
   },
   alert: {
     height: 20,
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginTop: 4,
     justifyContent: 'flex-start',
-    fontFamily: 'MontserratLight',
+    fontFamily: 'MontserratSemiBold',
   },
   wrap: {
     marginTop: 5,

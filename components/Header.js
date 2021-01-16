@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, StyleSheet, Text, Image, ImageBackground} from 'react-native';
+import {View, StyleSheet, Text, Image} from 'react-native';
 
 export default function Header() {
   return (
     <View style={styles.header}>
       <Image style={styles.img} source={require('../assets/me.png')} />
       <View>
-        <Text style={styles.text}>Hi, Daffa Quraisy</Text>
+        <Text style={styles.text}>Daffa Quraisy</Text>
         <Text style={styles.kelas}>XII RPL</Text>
       </View>
     </View>
@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     marginLeft: 20,
-    padding: 0,
   },
   text: {
     color: 'white',
