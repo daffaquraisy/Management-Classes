@@ -11,6 +11,7 @@ import {
   Platform,
   StyleSheet,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Login({navigation}) {
   const [showPassword, setShowPassword] = useState(false);
@@ -33,6 +34,7 @@ export default function Login({navigation}) {
         {/* Fullname */}
         <View style={styles.formField}>
           <Text style={styles.formLabel}>Full Name</Text>
+          <Icon name="user" style={styles.iconFA} size={20} />
           <TextInput
             style={styles.formInput}
             placeholder="Enter Full Name"
@@ -45,6 +47,7 @@ export default function Login({navigation}) {
         {/* Password */}
         <View style={styles.formField}>
           <Text style={styles.formLabel}>Password</Text>
+
           <TextInput
             style={styles.formInput}
             placeholder="Enter Password"
@@ -80,10 +83,12 @@ export default function Login({navigation}) {
           <Text style={styles.btnLabel}>Login</Text>
         </TouchableOpacity>
 
-        <View style={styles.textWrap}>
-          <Text style={styles.question}>Don't have an account ?</Text>
-          <Text style={styles.createAcc}>Create an account !</Text>
-        </View>
+        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+          <View style={styles.textWrap}>
+            <Text style={styles.question}>Don't have an account ?</Text>
+            <Text style={styles.createAcc}>Create an account !</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -120,21 +125,23 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   formInput: {
-    borderBottomColor: '#888787',
-    borderBottomWidth: 1,
+    borderColor: '#888787',
+    borderWidth: 1.3,
     height: 40,
     color: '#888787',
-    opacity: 0.6,
+    opacity: 0.4,
     fontFamily: 'MontserratLight',
+    borderRadius: 3,
   },
   formLabel: {
     color: '#327fe3',
     fontFamily: 'MontserratSemiBold',
+    marginBottom: 7,
   },
   wrapIcon: {
     position: 'absolute',
     right: 0,
-    bottom: 10,
+    bottom: 1,
     height: 30,
     width: 30,
   },
@@ -154,7 +161,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     alignItems: 'center',
     justifyContent: 'center',
-    width: 320,
+    width: 300,
   },
   btnLabel: {
     color: '#fff',
@@ -176,5 +183,13 @@ const styles = StyleSheet.create({
     color: '#327fe3',
     fontFamily: 'MontserratSemiBold',
     fontSize: 11,
+  },
+  iconFA: {
+    position: 'absolute',
+    right: 0,
+    bottom: 1,
+    height: 30,
+    width: 25,
+    color: '#888787',
   },
 });
