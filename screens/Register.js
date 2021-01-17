@@ -13,8 +13,23 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default function Login({navigation}) {
+export default function Register({navigation}) {
   const [showPassword, setShowPassword] = useState(false);
+
+  function renderHeader() {
+    return (
+      <TouchableOpacity
+        style={styles.headerWrap}
+        onPress={() => navigation.navigate('Login')}>
+        <Image
+          source={require('../assets/back.png')}
+          resizeMode="contain"
+          style={styles.iconBack}
+        />
+        <Text style={styles.backBtn}>Back</Text>
+      </TouchableOpacity>
+    );
+  }
 
   function renderLogo() {
     return (
@@ -43,6 +58,34 @@ export default function Login({navigation}) {
           />
         </View>
         {/* FullnameEnd */}
+
+        {/* Email */}
+        <View style={styles.formField}>
+          <Text style={styles.formLabel}>Email</Text>
+          <Icon name="envelope" style={styles.iconFA} size={18} />
+          <TextInput
+            style={styles.formInput}
+            placeholder="Enter Email"
+            placeholderTextColor="#888787"
+            selectionColor="#aeaeae"
+            keyboardType="email-address"
+          />
+        </View>
+        {/* EmailEnd */}
+
+        {/* Phone */}
+        <View style={styles.formField}>
+          <Text style={styles.formLabel}>Phone Number</Text>
+          <Icon name="phone" style={styles.iconFA} size={18} />
+          <TextInput
+            style={styles.formInput}
+            placeholder="Enter Phone Number"
+            placeholderTextColor="#888787"
+            selectionColor="#aeaeae"
+            keyboardType="numeric"
+          />
+        </View>
+        {/* PhoneEnd */}
 
         {/* Password */}
         <View style={styles.formField}>
@@ -80,14 +123,7 @@ export default function Login({navigation}) {
         <TouchableOpacity
           style={styles.btn}
           onPress={() => navigation.navigate('Home')}>
-          <Text style={styles.btnLabel}>Login</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-          <View style={styles.textWrap}>
-            <Text style={styles.question}>Don't have an account ?</Text>
-            <Text style={styles.createAcc}>Create an account !</Text>
-          </View>
+          <Text style={styles.btnLabel}>Submit</Text>
         </TouchableOpacity>
       </View>
     );
@@ -98,6 +134,7 @@ export default function Login({navigation}) {
       style={{flex: 1}}
       behavior={Platform.OS === 'ios' ? 'padding' : 'null'}>
       <ScrollView style={{backgroundColor: '#fff'}}>
+        {renderHeader()}
         {renderLogo()}
         {renderForm()}
         {renderButton()}
@@ -108,7 +145,7 @@ export default function Login({navigation}) {
 
 const styles = StyleSheet.create({
   logoWrap: {
-    marginTop: 40,
+    marginTop: 20,
     height: 180,
     alignItems: 'center',
     justifyContent: 'center',
@@ -191,5 +228,21 @@ const styles = StyleSheet.create({
     height: 30,
     width: 25,
     color: '#888787',
+  },
+  backBtn: {
+    marginLeft: 10,
+    color: '#327fe3',
+    fontFamily: 'MontserratSemiBold',
+  },
+  headerWrap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 20,
+    paddingHorizontal: 20,
+  },
+  iconBack: {
+    width: 20,
+    height: 20,
+    tintColor: '#327fe3',
   },
 });
