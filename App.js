@@ -1,20 +1,24 @@
 import React from 'react';
-import {View, StyleSheet, StatusBar, ScrollView} from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 import Home from './screens/Home';
+import Login from './screens/Login';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ScrollView>
-        <StatusBar backgroundColor="#0059D0" barStyle="light-content" />
-        <Home />
-      </ScrollView>
-    </View>
+    <NavigationContainer>
+      <StatusBar backgroundColor="#0059D0" barStyle="light-content" />
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+        initialRouteName={'Login'}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-  },
-});

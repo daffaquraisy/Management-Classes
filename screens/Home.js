@@ -6,7 +6,7 @@ import MidBody from '../components/MidBody';
 
 export default function Home() {
   return (
-    <View>
+    <View style={{backgroundColor: '#fff'}}>
       <ScrollView>
         <Header />
         <Body />
