@@ -7,7 +7,7 @@ export default function Header() {
       <Image style={styles.img} source={require('../assets/me.png')} />
       <View>
         <Text style={styles.text}>Daffa Quraisy</Text>
-        <Text style={styles.kelas}>XII RPL</Text>
+        <Text style={styles.kelas}>Teknik Informatika</Text>
       </View>
     </View>
   );

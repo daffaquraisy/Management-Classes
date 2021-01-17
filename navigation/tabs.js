@@ -242,7 +242,7 @@ const Tabs = () => {
                   alignItems: 'center',
                 }}>
                 <Icon
-                  name="gear"
+                  name="user"
                   size={20}
                   style={{
                     width: 20,
@@ -268,7 +268,7 @@ const Tabs = () => {
                   alignItems: 'center',
                 }}>
                 <Icon
-                  name="gear"
+                  name="user"
                   size={20}
                   style={{
                     width: 20,
