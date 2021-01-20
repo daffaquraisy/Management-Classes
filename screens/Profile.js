@@ -23,9 +23,16 @@ export default function Profile() {
             <Image style={styles.img} source={require('../assets/me.png')} />
 
             <View style={styles.btnWrap}>
-              <TouchableOpacity style={styles.btn}>
-                <Text style={styles.btnLabel}>Logout</Text>
-              </TouchableOpacity>
+              <View>
+                <TouchableOpacity style={styles.btn}>
+                  <Text style={styles.btnLabel}>Edit Profile</Text>
+                </TouchableOpacity>
+              </View>
+              <View>
+                <TouchableOpacity style={styles.btnLogout}>
+                  <Text style={styles.btnLabel}>Logout</Text>
+                </TouchableOpacity>
+              </View>
             </View>
 
             <View style={styles.bioWrap}>
@@ -35,11 +42,103 @@ export default function Profile() {
               style={{
                 borderWidth: 0.4,
                 color: '#888787',
-                opacity: 0.3,
+                opacity: 0.15,
                 marginHorizontal: 20,
               }}></View>
 
-            <View style={styles.info}></View>
+            <View style={styles.info}>
+              <View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Tempat Lahir</Text>
+                  <Text style={styles.bioDesc}>Bogor</Text>
+                </View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Tanggal Lahir</Text>
+                  <Text style={styles.bioDesc}>06 Agustus 2002</Text>
+                </View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Jenis Kelamin</Text>
+                  <Text style={styles.bioDesc}>Pria</Text>
+                </View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Agama</Text>
+                  <Text style={styles.bioDesc}>Islam</Text>
+                </View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Email</Text>
+                  <Text style={styles.bioDesc}>daffaquraisy@gmail.com</Text>
+                </View>
+              </View>
+
+              <View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Golongan Darah</Text>
+                  <Text style={styles.bioDesc}>O</Text>
+                </View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Status Perkawinan</Text>
+                  <Text style={styles.bioDesc}>Belum Menikah</Text>
+                </View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Warga Negara</Text>
+                  <Text style={styles.bioDesc}>WNI</Text>
+                </View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Nomor HP</Text>
+                  <Text style={styles.bioDesc}>085878085670</Text>
+                </View>
+              </View>
+            </View>
+
+            {/* Akademik */}
+            <View style={styles.akaWrap}>
+              <Text style={styles.title}>Data Akademik</Text>
+            </View>
+            <View
+              style={{
+                borderWidth: 0.4,
+                color: '#888787',
+                opacity: 0.15,
+                marginHorizontal: 20,
+              }}></View>
+
+            <View style={styles.info}>
+              <View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Jalur Masuk</Text>
+                  <Text style={styles.bioDesc}>UTM-BK</Text>
+                </View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Tanggal Masuk</Text>
+                  <Text style={styles.bioDesc}>06 Agustus 2020</Text>
+                </View>
+              </View>
+            </View>
+
+            {/* Pendidikan */}
+            <View style={styles.penWrap}>
+              <Text style={styles.title}>Data Pendidikan</Text>
+            </View>
+            <View
+              style={{
+                borderWidth: 0.4,
+                color: '#888787',
+                opacity: 0.15,
+                marginHorizontal: 20,
+              }}></View>
+
+            <View style={styles.info}>
+              <View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Pendidikan Sebelumnya</Text>
+                  <Text style={styles.bioDesc}>SMK</Text>
+                </View>
+                <View style={styles.birthBio}>
+                  <Text style={styles.bioTl}>Asal Pendidikan</Text>
+                  <Text style={styles.bioDesc}>SMKS BINA INFORMATIKA</Text>
+                </View>
+              </View>
+            </View>
           </View>
         </View>
       </View>
@@ -60,15 +159,15 @@ const styles = StyleSheet.create({
   },
   body: {
     backgroundColor: '#fff',
-    marginTop: -50,
-    borderRadius: 10,
-    height: '70%',
+    marginTop: -60,
+    borderRadius: 5,
+    height: '100%',
     width: '90%',
     elevation: 5,
   },
   img: {
-    height: 100,
-    width: 100,
+    height: 85,
+    width: 85,
     top: -50,
     left: 20,
     borderWidth: 5,
@@ -77,7 +176,7 @@ const styles = StyleSheet.create({
   },
   textWrap: {
     alignItems: 'flex-start',
-    marginTop: 50,
+    marginTop: 45,
     marginLeft: 50,
   },
   name: {
@@ -91,31 +190,70 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   btnWrap: {
-    alignItems: 'flex-end',
-    marginRight: 20,
-    right: 40,
-    top: -90,
+    alignItems: 'flex-start',
+    left: 140,
+    top: -75,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
   },
   btn: {
-    height: 40,
+    height: 30,
     width: 80,
     backgroundColor: '#327fe3',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 5,
+    borderRadius: 3,
+    marginHorizontal: 5,
+  },
+  btnLogout: {
+    height: 30,
+    width: 80,
+    backgroundColor: 'red',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 3,
   },
   btnLabel: {
     color: '#fff',
-    fontSize: 14,
+    fontSize: 10,
     fontFamily: 'MontserratSemiBold',
   },
   bioWrap: {
-    marginTop: -80,
-    marginLeft: 20,
+    marginTop: -60,
+    marginHorizontal: 20,
     marginBottom: 5,
   },
   title: {
-    fontSize: 14,
+    fontSize: 12.1,
     fontFamily: 'MontserratSemiBold',
+  },
+  info: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: 20,
+  },
+  birthBio: {
+    marginVertical: 9.5,
+  },
+  bioTl: {
+    fontSize: 10,
+    fontFamily: 'MontserratSemiBold',
+    textAlign: 'left',
+  },
+  bioDesc: {
+    fontSize: 12,
+    fontFamily: 'MontserratLight',
+    textAlign: 'left',
+    color: '#888787',
+  },
+  akaWrap: {
+    marginTop: 5,
+    marginHorizontal: 20,
+    marginBottom: 5,
+  },
+  penWrap: {
+    marginTop: 5,
+    marginHorizontal: 20,
+    marginBottom: 5,
   },
 });
