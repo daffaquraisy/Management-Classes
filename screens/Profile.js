@@ -177,7 +177,7 @@ const styles = StyleSheet.create({
   textWrap: {
     alignItems: 'flex-start',
     marginTop: 45,
-    marginLeft: 50,
+    marginLeft: 45,
   },
   name: {
     fontFamily: 'MontserratSemiBold',
@@ -191,14 +191,14 @@ const styles = StyleSheet.create({
   },
   btnWrap: {
     alignItems: 'flex-start',
-    left: 140,
+    left: 120,
     top: -75,
     flexDirection: 'row',
     justifyContent: 'flex-start',
   },
   btn: {
     height: 30,
-    width: 80,
+    width: 90,
     backgroundColor: '#327fe3',
     alignItems: 'center',
     justifyContent: 'center',
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
   },
   btnLogout: {
     height: 30,
-    width: 80,
+    width: 90,
     backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
