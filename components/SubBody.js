@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 20,
     marginLeft: 20,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
     fontSize: 15,
     color: '#fff',
   },
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginTop: 4,
     justifyContent: 'flex-start',
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoRegular',
   },
   wrap: {
     marginTop: 5,

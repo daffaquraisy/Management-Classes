@@ -110,14 +110,14 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 12,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
     textAlign: 'left',
     color: '#000',
     marginBottom: 5,
   },
   desc: {
     fontSize: 10,
-    fontFamily: 'MontserratLight',
+    fontFamily: 'NunitoLight',
     textAlign: 'left',
     color: '#888787',
   },
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     color: '#fff',
     fontSize: 13,
-    fontFamily: 'MontserratLight',
+    fontFamily: 'NunitoLight',
   },
   container: {
     marginVertical: 5,
@@ -174,12 +174,12 @@ const styles = StyleSheet.create({
   },
   jam: {
     fontSize: 10.5,
-    fontFamily: 'MontserratLight',
+    fontFamily: 'NunitoLight',
     color: '#888787',
   },
   namaPel: {
     fontSize: 11.5,
-    fontFamily: 'MontserratLight',
+    fontFamily: 'NunitoLight',
     color: '#888787',
     marginLeft: 20,
   },
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
   },
   type: {
     fontSize: 9,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
     color: '#fff',
   },
 });

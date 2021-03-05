@@ -93,7 +93,7 @@ const Tabs = () => {
                   style={{
                     fontSize: 10,
                     color: '#0059D0',
-                    fontFamily: 'MontserratSemiBold',
+                    fontFamily: 'NunitoSemiBold',
                   }}>
                   Home
                 </Text>
@@ -147,7 +147,7 @@ const Tabs = () => {
                   style={{
                     fontSize: 10,
                     color: '#0059D0',
-                    fontFamily: 'MontserratSemiBold',
+                    fontFamily: 'NunitoSemiBold',
                   }}>
                   Schedules
                 </Text>
@@ -201,7 +201,7 @@ const Tabs = () => {
                   style={{
                     fontSize: 10,
                     color: '#0059D0',
-                    fontFamily: 'MontserratSemiBold',
+                    fontFamily: 'NunitoSemiBold',
                   }}>
                   Tasks
                 </Text>
@@ -255,7 +255,7 @@ const Tabs = () => {
                   style={{
                     fontSize: 10,
                     color: '#0059D0',
-                    fontFamily: 'MontserratSemiBold',
+                    fontFamily: 'NunitoSemiBold',
                   }}>
                   Profile
                 </Text>

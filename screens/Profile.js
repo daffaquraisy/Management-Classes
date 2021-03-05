@@ -180,12 +180,12 @@ const styles = StyleSheet.create({
     marginLeft: 45,
   },
   name: {
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
     fontSize: 15,
     color: '#fff',
   },
   kelas: {
-    fontFamily: 'MontserratLight',
+    fontFamily: 'NunitoLight',
     fontSize: 13,
     color: '#fff',
   },
@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
   btnLabel: {
     color: '#fff',
     fontSize: 10,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
   },
   bioWrap: {
     marginTop: -60,
@@ -225,7 +225,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 12.1,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
   },
   info: {
     flexDirection: 'row',
@@ -237,12 +237,12 @@ const styles = StyleSheet.create({
   },
   bioTl: {
     fontSize: 10,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
     textAlign: 'left',
   },
   bioDesc: {
     fontSize: 12,
-    fontFamily: 'MontserratLight',
+    fontFamily: 'NunitoLight',
     textAlign: 'left',
     color: '#888787',
   },

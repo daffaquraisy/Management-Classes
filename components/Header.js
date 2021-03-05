@@ -28,12 +28,12 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
     marginLeft: 18,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
   },
   kelas: {
     color: 'white',
     fontSize: 12,
     marginLeft: 18,
-    fontFamily: 'MontserratLight',
+    fontFamily: 'NunitoLight',
   },
 });

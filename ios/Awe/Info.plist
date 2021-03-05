@@ -73,6 +73,9 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>NunitoLight.ttf</string>
+		<string>NunitoRegular.ttf</string>
+		<string>NunitoSemiBold.ttf</string>
 	</array>
 </dict>
 </plist>

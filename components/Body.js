@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
   text: {
     padding: 20,
     fontSize: 16,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
   },
 });

@@ -130,12 +130,12 @@ const styles = StyleSheet.create({
     height: 40,
     color: '#888787',
     opacity: 0.6,
-    fontFamily: 'MontserratLight',
+    fontFamily: 'NunitoLight',
     borderRadius: 3,
   },
   formLabel: {
     color: '#327fe3',
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
     marginBottom: 7,
   },
   wrapIcon: {
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
   },
   btnLabel: {
     color: '#fff',
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
   },
   textWrap: {
     flexDirection: 'row',
@@ -175,13 +175,13 @@ const styles = StyleSheet.create({
   },
   question: {
     color: '#888787',
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
     fontSize: 11,
     marginRight: 5,
   },
   createAcc: {
     color: '#327fe3',
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
     fontSize: 11,
   },
   iconFA: {

@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 11,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
   },
   label: {
     height: 13,
@@ -82,12 +82,12 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 7,
     marginTop: 2,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
   },
   caption: {
     color: '#888787',
     marginTop: 8,
-    fontFamily: 'MontserratLight',
+    fontFamily: 'NunitoLight',
     fontSize: 10,
   },
   dateWrap: {
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   },
   date: {
     fontSize: 11,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
     marginLeft: 4,
     marginTop: 3,
   },

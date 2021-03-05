@@ -34,12 +34,12 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     borderTopLeftRadius: 20,
     marginTop: 130,
-    height: 410,
+    height: 440,
   },
   text: {
     padding: 20,
     fontSize: 16,
-    fontFamily: 'MontserratSemiBold',
+    fontFamily: 'NunitoSemiBold',
   },
   wrap: {
     alignItems: 'center',
