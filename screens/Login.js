@@ -125,18 +125,20 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   formInput: {
-    borderColor: '#888787',
+    borderColor: '#efefef',
     borderWidth: 1.3,
     height: 40,
-    color: '#888787',
+    color: '#000',
     opacity: 0.6,
     fontFamily: 'NunitoLight',
     borderRadius: 3,
+    backgroundColor: '#efefef',
   },
   formLabel: {
     color: '#327fe3',
     fontFamily: 'NunitoSemiBold',
     marginBottom: 7,
+    fontSize: 12.5,
   },
   wrapIcon: {
     position: 'absolute',

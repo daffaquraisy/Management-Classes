@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, TouchableOpacity, Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Home, Profile, List, PR} from '../screens';
+import {Home, Profile, List, PR, AddNew} from '../screens';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Tab = createBottomTabNavigator();
@@ -161,6 +161,60 @@ const Tabs = () => {
                 }}>
                 <Icon
                   name="book"
+                  size={20}
+                  style={{
+                    width: 20,
+                    height: 20,
+                    color: '#888787',
+                    marginRight: 5,
+                  }}
+                />
+              </View>
+            ),
+          tabBarButton: (props) => <TabBarButton {...props} />,
+        }}
+      />
+
+      <Tab.Screen
+        name="AddNew"
+        component={AddNew}
+        options={{
+          tabBarIcon: ({focused}) =>
+            focused ? (
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Icon
+                  name="plus"
+                  size={20}
+                  style={{
+                    width: 20,
+                    height: 20,
+                    color: '#0059D0',
+                    marginRight: 5,
+                  }}
+                />
+                <Text
+                  style={{
+                    fontSize: 10,
+                    color: '#0059D0',
+                    fontFamily: 'NunitoSemiBold',
+                  }}>
+                  New
+                </Text>
+              </View>
+            ) : (
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Icon
+                  name="plus"
                   size={20}
                   style={{
                     width: 20,

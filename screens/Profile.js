@@ -226,6 +226,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 12.1,
     fontFamily: 'NunitoSemiBold',
+    color: '#252b46',
   },
   info: {
     flexDirection: 'row',
@@ -239,6 +240,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontFamily: 'NunitoSemiBold',
     textAlign: 'left',
+    color: '#252b46',
   },
   bioDesc: {
     fontSize: 12,

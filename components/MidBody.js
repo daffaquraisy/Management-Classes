@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     padding: 20,
     fontSize: 16,
     fontFamily: 'NunitoSemiBold',
+    color: '#252b46',
   },
   wrap: {
     alignItems: 'center',

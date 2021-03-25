@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 11,
     fontFamily: 'NunitoSemiBold',
+    color: '#252b46',
   },
   label: {
     height: 13,
@@ -99,6 +100,7 @@ const styles = StyleSheet.create({
     fontFamily: 'NunitoSemiBold',
     marginLeft: 4,
     marginTop: 3,
+    color: '#252b46',
   },
   img: {
     height: 18,

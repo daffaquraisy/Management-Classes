@@ -175,11 +175,9 @@ export default function PR() {
 const styles = StyleSheet.create({
   wrap: {
     flexDirection: 'row',
-    justifyContent: 'flex-start',
     marginTop: 20,
     marginLeft: 20,
     marginRight: 20,
-    justifyContent: 'center',
   },
   boxWhite: {
     backgroundColor: '#fff',
@@ -206,6 +204,7 @@ const styles = StyleSheet.create({
     top: -6,
     fontSize: 9,
     fontFamily: 'NunitoSemiBold',
+    color: '#252b46',
   },
   dateWrap: {
     flexDirection: 'row',
@@ -216,6 +215,7 @@ const styles = StyleSheet.create({
     fontSize: 9,
     fontFamily: 'NunitoSemiBold',
     marginLeft: 4,
+    color: '#252b46',
   },
   img: {
     height: 11,
