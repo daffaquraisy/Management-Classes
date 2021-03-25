@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-export default function Profile() {
+export default function Profile({navigation}) {
   return (
     <ScrollView>
       <View style={{backgroundColor: '#fff'}}>
@@ -24,7 +24,9 @@ export default function Profile() {
 
             <View style={styles.btnWrap}>
               <View>
-                <TouchableOpacity style={styles.btn}>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('Edit')}
+                  style={styles.btn}>
                   <Text style={styles.btnLabel}>Edit Profile</Text>
                 </TouchableOpacity>
               </View>
