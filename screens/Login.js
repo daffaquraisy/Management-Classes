@@ -11,9 +11,23 @@ import {
   StyleSheet,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {useForm} from '../utils';
+import {signInAction} from '../redux/action';
+import {useDispatch} from 'react-redux';
 
 export default function Login({navigation}) {
   const [showPassword, setShowPassword] = useState(false);
+
+  const [form, setForm] = useForm({
+    email: '',
+    password: '',
+  });
+
+  const dispatch = useDispatch();
+
+  const onSubmit = () => {
+    dispatch(signInAction(form, navigation));
+  };
 
   function renderLogo() {
     return (
@@ -30,18 +44,21 @@ export default function Login({navigation}) {
   function renderForm() {
     return (
       <View style={styles.formWrap}>
-        {/* Fullname */}
+        {/* Email */}
         <View style={styles.formField}>
-          <Text style={styles.formLabel}>Full Name</Text>
-          <Icon name="user" style={styles.iconFA} size={20} />
+          <Text style={styles.formLabel}>Email</Text>
+          <Icon name="envelope" style={styles.iconFA} size={18} />
           <TextInput
             style={styles.formInput}
-            placeholder="Enter Full Name"
+            placeholder="Enter Email"
             placeholderTextColor="#888787"
             selectionColor="#aeaeae"
+            keyboardType="email-address"
+            value={form.email}
+            onChangeText={(value) => setForm('email', value)}
           />
         </View>
-        {/* FullnameEnd */}
+        {/* EmailEnd */}
 
         {/* Password */}
         <View style={styles.formField}>
@@ -53,6 +70,8 @@ export default function Login({navigation}) {
             placeholderTextColor="#888787"
             selectionColor="#aeaeae"
             secureTextEntry={!showPassword}
+            value={form.password}
+            onChangeText={(value) => setForm('password', value)}
           />
 
           <TouchableOpacity
@@ -76,9 +95,7 @@ export default function Login({navigation}) {
   function renderButton() {
     return (
       <View style={styles.btnWrap}>
-        <TouchableOpacity
-          style={styles.btn}
-          onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity style={styles.btn} onPress={onSubmit}>
           <Text style={styles.btnLabel}>Login</Text>
         </TouchableOpacity>
 

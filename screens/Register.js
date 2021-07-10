@@ -26,13 +26,11 @@ export default function Register({navigation}) {
   });
 
   const dispatch = useDispatch();
-  const {registerReducer} = useSelector((state) => state);
 
   const onSubmit = () => {
     // store to redux
     const data = {
       ...form, // value from state form
-      ...registerReducer, // old value from state register
     };
 
     // show loading loader with action

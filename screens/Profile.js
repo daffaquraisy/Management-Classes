@@ -7,8 +7,15 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Profile({navigation}) {
+  const signOut = () => {
+    AsyncStorage.multiRemove(['userProfile', 'token']).then(() => {
+      navigation.reset({index: 0, routes: [{name: 'Login'}]});
+    });
+  };
+
   return (
     <ScrollView>
       <View style={{backgroundColor: '#fff'}}>
@@ -31,7 +38,7 @@ export default function Profile({navigation}) {
                 </TouchableOpacity>
               </View>
               <View>
-                <TouchableOpacity style={styles.btnLogout}>
+                <TouchableOpacity style={styles.btnLogout} onPress={signOut}>
                   <Text style={styles.btnLabel}>Logout</Text>
                 </TouchableOpacity>
               </View>
