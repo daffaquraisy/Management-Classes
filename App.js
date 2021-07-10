@@ -1,29 +1,31 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
-import Login from './screens/Login';
-import Register from './screens/Register';
-import Edit from './screens/Edit';
-import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import Tabs from './navigation/tabs';
+import Router from './router';
+import FlashMessage from 'react-native-flash-message';
+import {Provider, useSelector} from 'react-redux';
+import store from './redux/store';
+import Loading from './screens/Loading';
 
-const Stack = createStackNavigator();
+const MainApp = () => {
+  const {isLoading} = useSelector((state) => state.globalReducer);
 
-export default function App() {
   return (
     <NavigationContainer>
       <StatusBar backgroundColor="#0059D0" barStyle="light-content" />
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-        initialRouteName={'Login'}>
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Register" component={Register} />
-        {/* Tabs */}
-        <Stack.Screen name="Home" component={Tabs} />
-        <Stack.Screen name="Edit" component={Edit} />
-      </Stack.Navigator>
+      <Router />
+      <FlashMessage position="top" />
+      {isLoading && <Loading />}
     </NavigationContainer>
   );
-}
+};
+
+const App = () => {
+  return (
+    <Provider store={store}>
+      <MainApp />
+    </Provider>
+  );
+};
+
+export default App;

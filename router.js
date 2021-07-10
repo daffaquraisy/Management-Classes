@@ -1,9 +1,14 @@
 import React from 'react';
+import Login from './screens/Login';
+import Register from './screens/Register';
+import Edit from './screens/Edit';
+import {createStackNavigator} from '@react-navigation/stack';
 import {View, TouchableOpacity, Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Home, Profile, List, PR, AddNew} from '../screens';
+import {Home, Profile, List, PR, AddNew} from './screens';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const TabBarButton = ({
@@ -56,7 +61,7 @@ const TabBarButton = ({
   }
 };
 
-const Tabs = () => {
+const MainApp = () => {
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -340,4 +345,20 @@ const Tabs = () => {
   );
 };
 
-export default Tabs;
+const Router = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+      initialRouteName={'Login'}>
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Register" component={Register} />
+      <Stack.Screen name="Edit" component={Edit} />
+      {/* Tabs */}
+      <Stack.Screen name="Home" component={MainApp} />
+    </Stack.Navigator>
+  );
+};
+
+export default Router;

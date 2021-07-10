@@ -11,9 +11,36 @@ import {
   StyleSheet,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {useDispatch, useSelector} from 'react-redux';
+import {setLoading, signUpAction} from '../redux/action';
+import {useForm} from '../utils';
 
 export default function Register({navigation}) {
   const [showPassword, setShowPassword] = useState(false);
+
+  const [form, setForm] = useForm({
+    fullname: '',
+    email: '',
+    phone: '',
+    password: '',
+  });
+
+  const dispatch = useDispatch();
+  const {registerReducer} = useSelector((state) => state);
+
+  const onSubmit = () => {
+    // store to redux
+    const data = {
+      ...form, // value from state form
+      ...registerReducer, // old value from state register
+    };
+
+    // show loading loader with action
+    dispatch(setLoading(true));
+
+    // post through API with action
+    dispatch(signUpAction(data, navigation));
+  };
 
   function renderHeader() {
     return (
@@ -54,6 +81,8 @@ export default function Register({navigation}) {
             placeholder="Enter Full Name"
             placeholderTextColor="#888787"
             selectionColor="#aeaeae"
+            value={form.fullname}
+            onChangeText={(value) => setForm('fullname', value)}
           />
         </View>
         {/* FullnameEnd */}
@@ -68,6 +97,8 @@ export default function Register({navigation}) {
             placeholderTextColor="#888787"
             selectionColor="#aeaeae"
             keyboardType="email-address"
+            value={form.email}
+            onChangeText={(value) => setForm('email', value)}
           />
         </View>
         {/* EmailEnd */}
@@ -82,6 +113,8 @@ export default function Register({navigation}) {
             placeholderTextColor="#888787"
             selectionColor="#aeaeae"
             keyboardType="numeric"
+            value={form.phone}
+            onChangeText={(value) => setForm('phone', value)}
           />
         </View>
         {/* PhoneEnd */}
@@ -96,6 +129,8 @@ export default function Register({navigation}) {
             placeholderTextColor="#888787"
             selectionColor="#aeaeae"
             secureTextEntry={!showPassword}
+            value={form.password}
+            onChangeText={(value) => setForm('password', value)}
           />
 
           <TouchableOpacity
@@ -119,9 +154,7 @@ export default function Register({navigation}) {
   function renderButton() {
     return (
       <View style={styles.btnWrap}>
-        <TouchableOpacity
-          style={styles.btn}
-          onPress={() => navigation.navigate('Home')}>
+        <TouchableOpacity style={styles.btn} onPress={onSubmit}>
           <Text style={styles.btnLabel}>Submit</Text>
         </TouchableOpacity>
       </View>
