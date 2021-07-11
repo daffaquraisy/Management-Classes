@@ -6,7 +6,7 @@ export default function MidBody() {
   return (
     <View>
       <View style={styles.body}>
-        <Text style={styles.text}>Recently Homeworks</Text>
+        <Text style={styles.text}>Recent Homeworks</Text>
         <View style={styles.wrap}>
           <View style={styles.boxBlue}>
             <View style={{marginLeft: 7}}>

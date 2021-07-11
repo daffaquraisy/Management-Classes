@@ -1,61 +1,41 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, StyleSheet, Text, Image} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
+import {getHomeworksData} from '../redux/action';
 
 export default function Content() {
+  const dispatch = useDispatch();
+  const {homework} = useSelector((state) => state.hwReducer);
+
+  useEffect(() => {
+    dispatch(getHomeworksData());
+  }, []);
+
   return (
     <View>
-      <View style={styles.wrap}>
-        <Text style={styles.title}>ALJABAR</Text>
+      {homework.map((item) => {
+        return (
+          <View>
+            <View style={styles.wrap}>
+              <Text style={styles.title}>{item.hTitle}</Text>
 
-        <View style={styles.label}>
-          <Text style={styles.labelText}>MATH</Text>
-        </View>
-      </View>
-      <Text style={styles.caption}>
-        Pada materi ini, kamu akan diperkenalkan pada 3 sifat yang akan berlaku
-        pada aljabar.
-      </Text>
-      <View style={styles.dateWrap}>
-        <Image style={styles.img} source={require('../assets/datePick.png')} />
+              <View style={styles.label}>
+                <Text style={styles.labelText}>{item.hCourse}</Text>
+              </View>
+            </View>
+            <Text style={styles.caption}>{item.hDescription}</Text>
+            <View style={styles.dateWrap}>
+              <Image
+                style={styles.img}
+                source={require('../assets/datePick.png')}
+              />
 
-        <Text style={styles.date}>04 August 2020</Text>
-      </View>
-      <View style={styles.line}></View>
-
-      <View style={styles.wrap}>
-        <Text style={styles.title}>GENETIKA</Text>
-
-        <View style={styles.label}>
-          <Text style={styles.labelText}>BIOLOGY</Text>
-        </View>
-      </View>
-      <Text style={styles.caption}>
-        Genetika merupakan studi ilmu yang mempelajari sifat keturunan.
-      </Text>
-      <View style={styles.dateWrap}>
-        <Image style={styles.img} source={require('../assets/datePick.png')} />
-
-        <Text style={styles.date}>05 August 2020</Text>
-      </View>
-      <View style={styles.line}></View>
-
-      <View style={styles.wrap}>
-        <Text style={styles.title}>RAHMAT ISLAM BAGI NUSANTARA</Text>
-
-        <View style={styles.label}>
-          <Text style={styles.labelText}>PAI</Text>
-        </View>
-      </View>
-      <Text style={styles.caption}>
-        Terdapat tiga teori yang dikemukakan para ahli sejarah terkait dengan
-        masuknya agama Islam ke Indonesia.
-      </Text>
-      <View style={styles.dateWrap}>
-        <Image style={styles.img} source={require('../assets/datePick.png')} />
-
-        <Text style={styles.date}>06 August 2020</Text>
-      </View>
-      <View style={styles.line}></View>
+              <Text style={styles.date}>{item.hDueDate}</Text>
+            </View>
+            <View style={styles.line}></View>
+          </View>
+        );
+      })}
     </View>
   );
 }
